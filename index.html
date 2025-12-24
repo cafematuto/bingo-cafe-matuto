@@ -32,7 +32,8 @@
     div.className = "qr";
     div.innerHTML = "<strong>Jogador " + i + "</strong><div id='qr"+i+"'></div>";
     container.appendChild(div);
-    new QRCode(document.getElementById("qr"+i), window.location.origin + "/jogador.html?j="+i);
+    const base = window.location.origin + window.location.pathname.replace("index.html", "");
+new QRCode(document.getElementById("qr"+i), base + "jogador.html?j=" + i);
   }
 </script>
 
